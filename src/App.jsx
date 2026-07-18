@@ -1,3 +1,4 @@
+import "./App.css";
 import ProductCard from "./components/ProductCard";
 
 function App() {
@@ -5,8 +6,7 @@ function App() {
   const products = [
     {
       name: "Denim Jacket",
-      price: 1999,
-      image: "jacket.jpg"
+      price: 1999
     },
     {
       name: "Oversized Hoodie",
@@ -25,17 +25,16 @@ function App() {
  return (
   <div>
     <h1>StyleHub</h1>
-
+     <div className="products-container">
     {
       products.map((product) => (
         <ProductCard
           name={product.name}
           price={product.price}
-          image={product.image}
         />
       ))
     }
-
+    </div>
   </div>
 );
 }

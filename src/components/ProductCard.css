@@ -1,7 +1,17 @@
-.product-card {
-  border: 1px solid gray;
+.product-card{
+  border: 1px solid #ddd;
+  border-radius: 12px;
   padding: 16px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 10px;
+  width: 220px;
+  margin: 12px;
+}
+
+.product-card h2{
+  margin: 0;
+}
+
+.product-card button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
 }

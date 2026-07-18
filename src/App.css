@@ -182,3 +182,7 @@
     border-right-color: var(--border);
   }
 }
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
