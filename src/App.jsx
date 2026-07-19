@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Hero from "./components/Hero";
 import ProductCard from "./components/ProductCard";
@@ -9,6 +10,7 @@ import tshirt from "./assets/black_t_shirt.webp";
 
 function App() {
 
+  const [cartCount, setCartCount] = useState(0);
   const products = [
     {
       name: "Denim Jacket",
@@ -35,7 +37,7 @@ function App() {
 
  return (
   <div>
-    <Navbar />
+    <Navbar  cartCount={cartCount} />
     <Hero />
      <div className="products-container">
     {
@@ -44,6 +46,7 @@ function App() {
           name={product.name}
           price={product.price}
           image={product.Image}
+          onAddToCart={() => setCartCount(cartCount + 1)}
         />
       ))
     }

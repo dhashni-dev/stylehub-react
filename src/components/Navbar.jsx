@@ -1,9 +1,9 @@
 import "./Navbar.css";
-function Navbar() {
+function Navbar(products) {
     return (
         <nav>
             <h1>StyleHub</h1>
-            <button>Cart</button>
+            <button>Cart ({products.cartCount})</button>
         </nav>
     );
 }
